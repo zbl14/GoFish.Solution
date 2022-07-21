@@ -26,7 +26,8 @@ namespace GoFish.Tests
       string player = "player1";
       Game newGame = new Game();
       newGame.Draw(num, player);
-      Assert.AreEqual(num, newGame.GetHand().Count);
+      Assert.AreEqual(num, newGame.GetHandOne().Count);
+      Assert.AreEqual(47, newGame.Deck.Count);
     }
   }
 }
