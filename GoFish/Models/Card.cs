@@ -39,5 +39,10 @@ namespace GoFish.Models
     {
       return _instances[index];
     }
+
+    public static void RemoveCard(int index)
+    {
+
+    }
   }
 }

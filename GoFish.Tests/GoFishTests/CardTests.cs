@@ -36,5 +36,14 @@ namespace GoFish.Tests
       Assert.AreEqual("spade", newCard.Suit);
       Assert.AreEqual("ace", newCard.Rank);
     }
+
+    [TestMethod]
+    public void RemoveCard_RemoveACardFromDeck_List()
+    {
+      int index = 0; 
+      List<Card> newDeck = Card.DeckBuilder();
+      Card.RemoveCard(index);
+      Assert.AreEqual(51, newDeck.Count);
+    }
   }
 }
