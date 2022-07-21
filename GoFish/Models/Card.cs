@@ -1,6 +1,6 @@
-namespace ProjectName.Models
+namespace GoFish.Models
 {
-  public class ClassName
+  public class Card
   {
     // properties, constructors, methods, etc. go here
   }

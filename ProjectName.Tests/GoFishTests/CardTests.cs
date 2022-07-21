@@ -1,11 +1,11 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName.Models;
+using GoFish.Models;
 
-namespace ProjectName.Tests
+namespace GoFish.Tests
 {
   [TestClass]
-  public class ClassNameTests // : IDisposable
+  public class CardTests // : IDisposable
   {
     // public void Dispose()
     // {
