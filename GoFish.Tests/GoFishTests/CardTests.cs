@@ -27,5 +27,14 @@ namespace GoFish.Tests
       Assert.AreEqual(52, newDeck.Count);
     }
 
+    [TestMethod]
+    public void GetCard_GetACard_String()
+    {
+      int index = 0; 
+      List<Card> newDeck = Card.DeckBuilder();
+      Card newCard = Card.GetCard(index);
+      Assert.AreEqual("spade", newCard.Suit);
+      Assert.AreEqual("ace", newCard.Rank);
+    }
   }
 }

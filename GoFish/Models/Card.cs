@@ -8,7 +8,7 @@ namespace GoFish.Models
     public string Rank { get; set; }
     private static List<Card> _instances = new List<Card> {};
     
-    private static string[] suits = { "hearts", "clubs", "spades", "diamonds" };
+    private static string[] suits = { "spade", "heart", "club", "diamond" };
     private static string[] ranks = { "ace", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king" };
 
     public Card(string suit, string rank)
@@ -33,6 +33,11 @@ namespace GoFish.Models
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public static Card GetCard(int index)
+    {
+      return _instances[index];
     }
   }
 }
