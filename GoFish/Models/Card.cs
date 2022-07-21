@@ -42,7 +42,7 @@ namespace GoFish.Models
 
     public static void RemoveCard(int index)
     {
-
+      _instances.RemoveAt(index);
     }
   }
 }
