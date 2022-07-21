@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using GoFish.Models;
 
@@ -13,10 +14,10 @@ namespace GoFish.Tests
     // }
 
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void CardConstructor_CreateInstanceOfCard_Card()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      Card newCard = new Card("hearts", "king");
+      Assert.AreEqual(typeof(Card), newCard.GetType());
     }
   }
 }
