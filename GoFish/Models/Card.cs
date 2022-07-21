@@ -15,6 +15,24 @@ namespace GoFish.Models
     {
       Suit = suit;
       Rank = rank;
+      _instances.Add(this);
+    }
+
+    public static List<Card> DeckBuilder()
+    {
+      foreach(string suit in suits)
+      {
+        foreach(string rank in ranks)
+        {
+          Card thisDeck = new Card(suit, rank);
+        }
+      }
+      return _instances;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }

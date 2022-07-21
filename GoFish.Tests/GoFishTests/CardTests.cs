@@ -6,12 +6,12 @@ using GoFish.Models;
 namespace GoFish.Tests
 {
   [TestClass]
-  public class CardTests // : IDisposable
+  public class CardTests : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   ClassName.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Card.ClearAll();
+    }
 
     [TestMethod]
     public void CardConstructor_CreateInstanceOfCard_Card()
@@ -19,5 +19,13 @@ namespace GoFish.Tests
       Card newCard = new Card("hearts", "king");
       Assert.AreEqual(typeof(Card), newCard.GetType());
     }
+
+    [TestMethod]
+    public void DeckBuilder_CreateADeck_List()
+    {
+      List<Card> newDeck = Card.DeckBuilder();
+      Assert.AreEqual(52, newDeck.Count);
+    }
+
   }
 }
