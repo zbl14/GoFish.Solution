@@ -5,6 +5,7 @@ namespace GoFish.Models
   public class Game
   {
     private static List<Card> _deck = Card.DeckBuilder();
+    private static List<Card> _hand = new List<Card> {}; 
     public List<Card> Deck { get; }
     public int PlayerOneScore { get; set; }
     public int PlayerTwoScore { get; set; }
@@ -15,5 +16,16 @@ namespace GoFish.Models
       PlayerOneScore = 0;
       PlayerTwoScore = 0;
     }
+
+    public List<Card> GetHand()
+    {
+      return _hand;
+    }
+
+    public void Draw(int num, string player)
+    {
+      
+    }
+
   }
 }
