@@ -43,5 +43,18 @@ namespace GoFish.Tests
       Assert.AreEqual(num, newGame.GetHandTwo().Count);
       Assert.AreEqual(42, newGame.GetDeck().Count);
     }
+
+    [TestMethod]
+    public void Match_DrawIfNoMatch_List()
+    {
+      Game newGame = new Game();
+      newGame.Draw(7, "player1");
+      newGame.Draw(7, "player2");
+      if(!newGame.Match(0,"player1"))
+      {
+        newGame.Draw(1, "player1");
+      }
+      Assert.AreEqual(8, newGame.GetHandOne().Count);
+    }
   }
 }

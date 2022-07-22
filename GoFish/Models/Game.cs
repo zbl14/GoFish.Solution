@@ -62,5 +62,33 @@ namespace GoFish.Models
       _handOne.Clear();
       _handTwo.Clear();
     }
+
+    public bool Match(int ind, string player)
+    {
+      if(player == "player1")
+      {
+        for(int i = 0; i < _handTwo.Count; i++)
+        {
+          if(_handTwo[i].Rank == _handOne[ind].Rank)
+          {
+            return true;
+          } 
+        }
+        Draw(1, player);
+        return false;
+      }
+      else
+      {
+        for(int i = 0; i < _handOne.Count; i++)
+        {
+          if(_handOne[i].Rank == _handTwo[ind].Rank)
+          {
+            return true;
+          } 
+        }
+        Draw(1, player);
+        return false;
+      }
+    }
   }
 }
